@@ -1,0 +1,202 @@
+.markdown-content {
+  line-height: 1.8;
+  color: var(--fg);
+}
+
+.md-h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+  color: var(--fg);
+  border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.md-h2 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  color: var(--fg);
+}
+
+.md-h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+  color: var(--accent);
+}
+
+.md-h4 {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--muted);
+}
+
+.md-p {
+  margin: 0 0 1.25rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.md-ul,
+.md-ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+.md-li {
+  margin: 0.5rem 0;
+  color: rgba(226, 232, 240, 0.9);
+  line-height: 1.7;
+}
+
+.md-li::marker {
+  color: var(--accent);
+}
+
+.md-blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 0 8px 8px 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.md-blockquote p {
+  margin: 0.5rem 0;
+}
+
+.md-blockquote p:first-child {
+  margin-top: 0;
+}
+
+.md-blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.md-table thead {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.md-table th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+}
+
+.md-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.md-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.md-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.md-code-inline {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.md-pre {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.md-code-block {
+  color: var(--fg);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.md-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.md-link:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+
+.md-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+
+/* Horizontal rule */
+.markdown-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  margin: 2.5rem 0;
+}
+
+/* Strong and emphasis */
+.markdown-content strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.markdown-content em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .md-h1 {
+    font-size: 1.75rem;
+  }
+
+  .md-h2 {
+    font-size: 1.5rem;
+  }
+
+  .md-h3 {
+    font-size: 1.25rem;
+  }
+
+  .table-wrapper {
+    font-size: 0.85rem;
+  }
+
+  .md-table th,
+  .md-table td {
+    padding: 0.625rem 0.75rem;
+  }
+}

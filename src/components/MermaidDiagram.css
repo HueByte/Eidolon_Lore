@@ -1,0 +1,26 @@
+.mermaid-container {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-error {
+  color: #ef4444;
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .mermaid-container {
+    padding: 1rem;
+  }
+}

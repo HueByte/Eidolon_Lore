@@ -301,6 +301,11 @@ FakesAssemblies/
 .ntvs_analysis.dat
 node_modules/
 
+# Vite / React build files
+dist/
+dist-ssr/
+*.local
+
 # Visual Studio 6 build log
 *.plg
 
@@ -416,3 +421,21 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Claude AI artifacts
+.claude/
+
+# Additional editor files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*_old.md
+README_old.md
