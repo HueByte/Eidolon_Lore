@@ -1,0 +1,67 @@
+name: Lint Markdown
+
+on:
+  push:
+    branches: ['master']
+    paths:
+      - 'lore/content/**/*.md'
+      - 'website/public/lore/**/*.md'
+      - '.markdownlint.json'
+      - 'scripts/lint-markdown.ps1'
+      - 'scripts/lint-markdown.sh'
+  pull_request:
+    branches: ['master']
+    paths:
+      - 'lore/content/**/*.md'
+      - 'website/public/lore/**/*.md'
+      - '.markdownlint.json'
+      - 'scripts/lint-markdown.ps1'
+      - 'scripts/lint-markdown.sh'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint Markdown Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'website/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: website
+        run: npm ci
+
+      - name: Run markdown linter
+        run: |
+          npx markdownlint-cli "lore/content/**/*.md" \
+            --ignore node_modules/** \
+            --ignore dist/** \
+            --ignore .git/** \
+            --ignore README.md \
+            --ignore "*.md" \
+            --config .markdownlint.json
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ $? -eq 0 ]; then
+            echo "✅ All markdown files passed linting!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Markdown linting failed. Please fix the issues and try again." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "To fix issues locally, run:" >> $GITHUB_STEP_SUMMARY
+            echo '```bash' >> $GITHUB_STEP_SUMMARY
+            echo "npm run lint:md:fix" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi

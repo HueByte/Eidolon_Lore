@@ -2,9 +2,15 @@
 
 A comprehensive, interactive lore documentation website for the Eidolon Line universe - a post-apocalyptic world where humanity survives aboard an ever-moving train guided by the benevolent AI consciousness, Eidolon.
 
-![Eidolon Line](https://img.shields.io/badge/Built%20with-React%20%2B%20Vite-38bdf8?style=for-the-badge&logo=react)
-![Mermaid](https://img.shields.io/badge/Diagrams-Mermaid-ff3670?style=for-the-badge&logo=mermaid)
-![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222222?style=for-the-badge&logo=github)
+[![Deploy Status](https://github.com/HueByte/Eidolon_Lore/actions/workflows/deploy.yml/badge.svg?branch=web)](https://github.com/HueByte/Eidolon_Lore/actions/workflows/deploy.yml)
+[![Markdown Lint](https://github.com/HueByte/Eidolon_Lore/actions/workflows/lint.yml/badge.svg?branch=web)](https://github.com/HueByte/Eidolon_Lore/actions/workflows/lint.yml)
+[![License](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-success?logo=github)](https://HueByte.github.io/Eidolon_Lore/)
+
+![Built with React](https://img.shields.io/badge/Built%20with-React%2018-61dafb?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.0-646cff?style=for-the-badge&logo=vite&logoColor=white)
+![Mermaid](https://img.shields.io/badge/Diagrams-Mermaid-ff3670?style=for-the-badge&logo=mermaid&logoColor=white)
+![Markdown](https://img.shields.io/badge/Docs-Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 
 ## ✨ Features
 
@@ -15,6 +21,7 @@ A comprehensive, interactive lore documentation website for the Eidolon Line uni
 - 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
 - ⚡ **Fast & Lightweight** - Built with Vite for optimal performance
 - 🔍 **SEO Optimized** - Proper meta tags and semantic HTML
+- ✅ **Automated Quality Checks** - Markdown linting enforced before deployment
 
 ## 🌌 World Overview
 
@@ -94,7 +101,26 @@ Eidolon_Lore/
 
 1. Create a markdown file in the appropriate directory under `src/lore/`
 2. Add the entry to `src/data/loreStructure.js`
-3. The page will automatically be available in the navigation
+3. Copy the file to `public/lore/` for serving
+4. Run the linter to ensure quality: `npm run lint:md`
+5. The page will automatically be available in the navigation
+
+### Markdown Linting
+
+All markdown files are automatically checked for quality and consistency:
+
+```bash
+# Check markdown files for issues
+npm run lint:md
+
+# Automatically fix markdown issues
+npm run lint:md:fix
+
+# Run all linters (JS + Markdown)
+npm run lint:all
+```
+
+**Note:** The deployment will fail if markdown linting fails, ensuring all content meets quality standards.
 
 ### Example Markdown with Mermaid
 
