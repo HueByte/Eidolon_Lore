@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
 [![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-success?logo=github)](https://HueByte.github.io/Eidolon_Lore/)
 
-A comprehensive lore documentation for the **Eidolon Line** universe - a post-apocalyptic world where humanity survives aboard an ever-moving train guided by the benevolent AI consciousness, Eidolon.
+A comprehensive interactive lore documentation for the **Eidolon Line** universe - a post-apocalyptic world where humanity survives aboard an ever-moving train guided by the benevolent AI consciousness, Eidolon.
 
 **[View the Lore Wiki →](https://HueByte.github.io/Eidolon_Lore/)**
 
