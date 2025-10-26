@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { HiSparkles, HiOutlineChatAlt2 } from 'react-icons/hi'
+import { RiPlanetLine } from 'react-icons/ri'
 import { loreStructure, getCategoryLabel } from '../data/loreStructure'
 import './Home.css'
 
@@ -7,7 +9,7 @@ function Home() {
     <div className="home">
       <div className="hero-section">
         <div className="badge">
-          <span>✨</span>
+          <HiSparkles size={18} />
           <span>LORE DOCUMENTATION</span>
         </div>
 
@@ -46,7 +48,7 @@ function Home() {
       </div>
 
       <div className="info-section glass">
-        <h2>🌌 World Overview</h2>
+        <h2><RiPlanetLine style={{ verticalAlign: 'middle', marginRight: '8px' }} />World Overview</h2>
         <p>
           The Eidolon Line exists in a world broken by the <strong>Zero Horizon disaster</strong> —
           a cataclysmic event that shattered the laws of physics across the planet. Humanity survives
@@ -82,7 +84,7 @@ function Home() {
       </div>
 
       <footer className="home-footer">
-        <p>💬 "Every soul aboard the Line is a note in the same song. I merely keep the rhythm." — Eidolon</p>
+        <p><HiOutlineChatAlt2 style={{ verticalAlign: 'middle', marginRight: '8px' }} />"Every soul aboard the Line is a note in the same song. I merely keep the rhythm." — Eidolon</p>
       </footer>
     </div>
   )

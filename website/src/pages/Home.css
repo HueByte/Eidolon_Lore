@@ -15,18 +15,20 @@
   padding: 0.5rem 1rem;
   margin-bottom: 1.5rem;
   border-radius: 999px;
-  background: rgba(56, 189, 248, 0.16);
-  color: var(--accent);
+  background: linear-gradient(135deg, rgba(82, 34, 88, 0.3), rgba(198, 60, 81, 0.25), rgba(255, 0, 110, 0.2));
+  color: var(--accent-pink);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.05em;
+  border: 1px solid rgba(198, 60, 81, 0.4);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.15);
 }
 
 .hero-section h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   letter-spacing: -0.04em;
   margin: 0 0 1.5rem;
-  background: linear-gradient(135deg, var(--fg) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--fg) 0%, var(--accent) 50%, var(--accent-magenta) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -45,11 +47,12 @@
   margin: 2rem auto;
   padding: 1.5rem;
   border-left: 4px solid var(--accent);
-  background: rgba(56, 189, 248, 0.05);
+  background: linear-gradient(135deg, rgba(82, 34, 88, 0.2), rgba(140, 48, 97, 0.15), rgba(198, 60, 81, 0.1));
   border-radius: 0 12px 12px 0;
   font-style: italic;
   color: var(--muted);
   text-align: left;
+  box-shadow: 0 0 30px rgba(198, 60, 81, 0.1);
 }
 
 .content-grid {
@@ -100,9 +103,10 @@
 }
 
 .category-links a:hover {
-  background: rgba(56, 189, 248, 0.1);
+  background: linear-gradient(90deg, rgba(82, 34, 88, 0.25), rgba(198, 60, 81, 0.2));
   color: var(--accent);
   transform: translateX(4px);
+  box-shadow: 0 0 15px rgba(198, 60, 81, 0.2);
 }
 
 .info-section {
@@ -134,13 +138,17 @@
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: rgba(15, 23, 42, 0.4);
+  background: linear-gradient(135deg, rgba(82, 34, 88, 0.15), rgba(140, 48, 97, 0.1), rgba(10, 10, 15, 0.7));
+  box-shadow: 0 0 20px rgba(140, 48, 97, 0.1);
 }
 
 .element-card h3 {
   margin: 0 0 0.75rem;
   font-size: 1.15rem;
-  color: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .element-card p {

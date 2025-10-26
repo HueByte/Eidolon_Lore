@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { IoWarningOutline, IoArrowBack } from 'react-icons/io5'
 import MarkdownRenderer from '../components/MarkdownRenderer'
 import { getCategoryLabel } from '../data/loreStructure'
 import './LorePage.css'
@@ -53,10 +54,11 @@ function LorePage() {
     return (
       <div className="lore-page">
         <div className="error-container glass">
-          <h2>⚠️ Page Not Found</h2>
+          <h2><IoWarningOutline style={{ verticalAlign: 'middle', marginRight: '8px' }} />Page Not Found</h2>
           <p>{error}</p>
           <Link to="/" className="back-link">
-            ← Back to Home
+            <IoArrowBack style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+            Back to Home
           </Link>
         </div>
       </div>
@@ -77,7 +79,8 @@ function LorePage() {
 
       <div className="page-footer">
         <Link to="/" className="back-link">
-          ← Back to Home
+          <IoArrowBack style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+          Back to Home
         </Link>
       </div>
     </div>

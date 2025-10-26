@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { HiOutlineMenu } from 'react-icons/hi'
+import { GiRailway } from 'react-icons/gi'
 import './Navbar.css'
 
 function Navbar({ onMenuClick }) {
@@ -6,7 +8,7 @@ function Navbar({ onMenuClick }) {
     <nav className="navbar glass">
       <div className="navbar-content">
         <Link to="/" className="navbar-brand">
-          <span className="brand-icon">⚡</span>
+          <GiRailway className="brand-icon" />
           <span className="brand-text">Eidolon Line</span>
         </Link>
 
@@ -15,9 +17,7 @@ function Navbar({ onMenuClick }) {
           onClick={onMenuClick}
           aria-label="Toggle menu"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          <HiOutlineMenu size={24} />
         </button>
       </div>
     </nav>

@@ -6,7 +6,8 @@
   border-left: none;
   border-right: none;
   border-top: none;
-  box-shadow: 0 10px 30px -15px rgba(15, 23, 42, 0.5);
+  box-shadow: 0 10px 30px -15px rgba(198, 60, 81, 0.5),
+              0 0 20px rgba(255, 0, 110, 0.1);
 }
 
 .navbar-content {
@@ -52,9 +53,10 @@
 }
 
 .menu-button:hover {
-  background: rgba(56, 189, 248, 0.1);
+  background: linear-gradient(135deg, rgba(82, 34, 88, 0.3), rgba(198, 60, 81, 0.25));
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--accent-pink);
+  box-shadow: 0 0 15px rgba(198, 60, 81, 0.3);
 }
 
 @media (max-width: 768px) {

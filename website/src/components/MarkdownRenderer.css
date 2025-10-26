@@ -8,8 +8,11 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0 0 1.5rem;
-  color: var(--fg);
-  border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+  background: linear-gradient(90deg, var(--fg), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid rgba(198, 60, 81, 0.4);
   padding-bottom: 0.5rem;
 }
 
@@ -24,7 +27,10 @@
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 600;
   margin: 2rem 0 0.75rem;
-  color: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .md-h4 {
@@ -59,10 +65,11 @@
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
   border-left: 4px solid var(--accent);
-  background: rgba(56, 189, 248, 0.05);
+  background: linear-gradient(90deg, rgba(82, 34, 88, 0.2), rgba(140, 48, 97, 0.12), rgba(198, 60, 81, 0.08));
   border-radius: 0 8px 8px 0;
   color: var(--muted);
   font-style: italic;
+  box-shadow: 0 0 20px rgba(198, 60, 81, 0.1);
 }
 
 .md-blockquote p {
@@ -91,14 +98,14 @@
 }
 
 .md-table thead {
-  background: rgba(56, 189, 248, 0.1);
+  background: linear-gradient(135deg, rgba(82, 34, 88, 0.3), rgba(140, 48, 97, 0.2), rgba(198, 60, 81, 0.15));
 }
 
 .md-table th {
   padding: 0.875rem 1rem;
   text-align: left;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-pink);
   border-bottom: 2px solid var(--border);
 }
 
@@ -109,7 +116,8 @@
 }
 
 .md-table tbody tr:hover {
-  background: rgba(56, 189, 248, 0.05);
+  background: linear-gradient(90deg, rgba(82, 34, 88, 0.15), rgba(198, 60, 81, 0.08));
+  box-shadow: 0 0 15px rgba(198, 60, 81, 0.1);
 }
 
 .md-table tbody tr:last-child td {
@@ -117,20 +125,21 @@
 }
 
 .md-code-inline {
-  background: rgba(56, 189, 248, 0.1);
-  color: var(--accent);
+  background: linear-gradient(135deg, rgba(140, 48, 97, 0.25), rgba(198, 60, 81, 0.2));
+  color: var(--accent-magenta);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
 .md-pre {
-  background: rgba(15, 23, 42, 0.6);
+  background: linear-gradient(135deg, rgba(82, 34, 88, 0.2), rgba(140, 48, 97, 0.15), rgba(10, 10, 15, 0.9));
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.25rem;
   overflow-x: auto;
   margin: 1.5rem 0;
+  box-shadow: 0 0 25px rgba(82, 34, 88, 0.15);
 }
 
 .md-code-block {
@@ -174,7 +183,7 @@
 }
 
 .markdown-content em {
-  color: var(--accent);
+  color: var(--accent-pink);
   font-style: italic;
 }
 

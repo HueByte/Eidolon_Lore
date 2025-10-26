@@ -1,4 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
+import { IoMdClose } from 'react-icons/io'
+import { IoBookOutline, IoHome } from 'react-icons/io5'
+import { HiOutlineLightBulb, HiOutlineCog, HiOutlineLocationMarker } from 'react-icons/hi'
 import { loreStructure } from '../data/loreStructure'
 import './Sidebar.css'
 
@@ -9,6 +12,32 @@ function Sidebar({ isOpen, onClose }) {
     return location.pathname === path
   }
 
+  const getCategoryIcon = (category) => {
+    switch(category) {
+      case 'concepts':
+        return <HiOutlineLightBulb size={18} />
+      case 'systems':
+        return <HiOutlineCog size={18} />
+      case 'locations':
+        return <HiOutlineLocationMarker size={18} />
+      default:
+        return null
+    }
+  }
+
+  const getCategoryTitle = (category) => {
+    switch(category) {
+      case 'concepts':
+        return 'Core Concepts'
+      case 'systems':
+        return 'Systems'
+      case 'locations':
+        return 'Locations'
+      default:
+        return category
+    }
+  }
+
   return (
     <>
       <div
@@ -17,11 +46,12 @@ function Sidebar({ isOpen, onClose }) {
       />
       <aside className={`sidebar glass ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <h2>📚 Lore Index</h2>
+          <h2>
+            <IoBookOutline style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+            Lore Index
+          </h2>
           <button className="close-button" onClick={onClose} aria-label="Close menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <IoMdClose size={24} />
           </button>
         </div>
 
@@ -29,9 +59,8 @@ function Sidebar({ isOpen, onClose }) {
           {Object.entries(loreStructure).map(([category, items]) => (
             <div key={category} className="nav-section">
               <h3 className="nav-section-title">
-                {category === 'concepts' && '🎯 Core Concepts'}
-                {category === 'systems' && '⚙️ Systems'}
-                {category === 'locations' && '🏛️ Locations'}
+                {getCategoryIcon(category)}
+                <span style={{ marginLeft: '8px' }}>{getCategoryTitle(category)}</span>
               </h3>
               <ul className="nav-list">
                 {items.map((item) => (
@@ -52,7 +81,8 @@ function Sidebar({ isOpen, onClose }) {
 
         <div className="sidebar-footer">
           <Link to="/" className="nav-link" onClick={onClose}>
-            🏠 Home
+            <IoHome style={{ verticalAlign: 'middle', marginRight: '8px' }} />
+            Home
           </Link>
         </div>
       </aside>

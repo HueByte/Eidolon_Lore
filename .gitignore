@@ -424,7 +424,7 @@ FodyWeavers.xsd
 
 # Claude AI artifacts
 .claude/
-
+claude.md
 # Additional editor files
 .idea/
 *.swp
@@ -439,3 +439,6 @@ Thumbs.db
 *.bak
 *_old.md
 README_old.md
+
+.dev-local/
+package-lock.json
